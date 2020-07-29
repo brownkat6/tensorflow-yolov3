@@ -46,7 +46,7 @@ class Dataset(object):
     def load_annotations(self, dataset_type):
         with open(self.annot_path, 'r') as f:
             txt = f.readlines()
-            annotations = [line.strip() for line in txt if len(line.strip().split()[1:]) != 0]
+            annotations = [line.strip() for line in txt if len(line.strip().split()[2:]) != 0]
         np.random.shuffle(annotations)
         return annotations
 
@@ -165,7 +165,8 @@ class Dataset(object):
         image = np.array(cv2.imread(image_path))
         #EDIT: change 1: to 2: so that it ignores the second part of the filepath
         bboxes = np.array([list(map(lambda x: int(float(x)), box.split(','))) for box in line[2:]])
-        print("BBoxes: " + str(bboxes))
+        if len(bboxes)==0 or len(bboxes[0])==0:
+            print("BBoxes: " + str(bboxes))
 
         if self.data_aug:
             image, bboxes = self.random_horizontal_flip(np.copy(image), np.copy(bboxes))
