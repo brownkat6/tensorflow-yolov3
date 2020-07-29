@@ -158,6 +158,8 @@ class Dataset(object):
         #EDIT: configure to work with paths mounted in google drive
         image_path = line[0] + " " + line[1]
         if not os.path.exists(image_path):
+            print("Line: " + str(line))
+            print(image_path)
             raise KeyError("%s does not exist ... " %image_path)
         image = np.array(cv2.imread(image_path))
         #EDIT: change 1: to 2: so that it ignores the second part of the filepath
