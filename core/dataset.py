@@ -154,7 +154,9 @@ class Dataset(object):
     def parse_annotation(self, annotation):
 
         line = annotation.split()
-        image_path = line[0]
+        #image_path = line[0]
+        #EDIT: configure to work with paths mounted in google drive
+        image_path = line[0] + " " + line[1]
         if not os.path.exists(image_path):
             raise KeyError("%s does not exist ... " %image_path)
         image = np.array(cv2.imread(image_path))
