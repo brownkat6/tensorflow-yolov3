@@ -17,9 +17,11 @@ import core.utils as utils
 import tensorflow as tf
 from PIL import Image
 
+ROOT_DIR = "/content/tensorflow-yolov3"
+
 return_elements = ["input/input_data:0", "pred_sbbox/concat_2:0", "pred_mbbox/concat_2:0", "pred_lbbox/concat_2:0"]
-pb_file         = "./yolov3_coco.pb"
-image_path      = "./docs/images/road.jpeg"
+pb_file         = ROOT_DIR + "/yolov3_coco.pb"
+image_path      = ROOT_DIR + "/docs/images/road.jpeg"
 num_classes     = 80
 input_size      = 416
 graph           = tf.Graph()
