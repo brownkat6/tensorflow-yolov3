@@ -22,6 +22,8 @@ from core.dataset import Dataset
 from core.yolov3 import YOLOV3
 from core.config import cfg
 
+ROOT_DIR = "/content/tensorflow-yolov3"
+
 
 class YoloTrain(object):
     def __init__(self):
@@ -37,7 +39,7 @@ class YoloTrain(object):
         self.time                = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
         self.moving_ave_decay    = cfg.YOLO.MOVING_AVE_DECAY
         self.max_bbox_per_scale  = 150
-        self.train_logdir        = "./data/log/train"
+        self.train_logdir        = ROOT_DIR + "/data/log/train"
         self.trainset            = Dataset('train')
         self.testset             = Dataset('test')
         self.steps_per_period    = len(self.trainset)
@@ -115,7 +117,7 @@ class YoloTrain(object):
             tf.summary.scalar("prob_loss",  self.prob_loss)
             tf.summary.scalar("total_loss", self.loss)
 
-            logdir = "./data/log/"
+            logdir =  ROOT_DIR + "/data/log/"
             if os.path.exists(logdir): shutil.rmtree(logdir)
             os.mkdir(logdir)
             self.write_op = tf.summary.merge_all()
@@ -173,7 +175,7 @@ class YoloTrain(object):
                 test_epoch_loss.append(test_step_loss)
 
             train_epoch_loss, test_epoch_loss = np.mean(train_epoch_loss), np.mean(test_epoch_loss)
-            ckpt_file = "./checkpoint/yolov3_test_loss=%.4f.ckpt" % test_epoch_loss
+            ckpt_file =  ROOT_DIR + "/checkpoint/yolov3_test_loss=%.4f.ckpt" % test_epoch_loss
             log_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
             print("=> Epoch: %2d Time: %s Train loss: %.2f Test loss: %.2f Saving %s ..."
                             %(epoch, log_time, train_epoch_loss, test_epoch_loss, ckpt_file))
