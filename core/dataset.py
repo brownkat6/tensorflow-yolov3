@@ -102,7 +102,7 @@ class Dataset(object):
         if random.random() < 0.5:
             _, w, _ = image.shape
             image = image[:, ::-1, :]
-            print("BBox: " + str(bboxes))
+            #print("BBox: " + str(bboxes))
             bboxes[:, [0,2]] = w - bboxes[:, [2,0]]
 
         return image, bboxes
@@ -165,8 +165,9 @@ class Dataset(object):
         image = np.array(cv2.imread(image_path))
         #EDIT: change 1: to 2: so that it ignores the second part of the filepath
         bboxes = np.array([list(map(lambda x: int(float(x)), box.split(','))) for box in line[2:]])
-        if len(bboxes)==0 or len(bboxes[0])==0:
-            print("BBoxes: " + str(bboxes))
+        if len(bboxes)==0:
+            print(image_path)
+            print("BBoxes empty error: " + str(bboxes))
 
         if self.data_aug:
             image, bboxes = self.random_horizontal_flip(np.copy(image), np.copy(bboxes))
