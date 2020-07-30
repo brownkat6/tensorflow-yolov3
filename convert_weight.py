@@ -61,6 +61,8 @@ for var in tf.global_variables():
 org_weights_num = len(org_weights_mess)
 cur_weights_num = len(cur_weights_mess)
 if cur_weights_num != org_weights_num:
+    print(str(org_weights_num) + " layers in original")
+    print(str(cur_weights_num) + " layers in current")
     raise RuntimeError
 
 print('=> Number of weights that will rename:\t%d' % cur_weights_num)
