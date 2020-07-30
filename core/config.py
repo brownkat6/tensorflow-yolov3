@@ -30,7 +30,8 @@ __C.YOLO.STRIDES                = [8, 16, 32]
 __C.YOLO.ANCHOR_PER_SCALE       = 3
 __C.YOLO.IOU_LOSS_THRESH        = 0.5
 __C.YOLO.UPSAMPLE_METHOD        = "resize"
-__C.YOLO.ORIGINAL_WEIGHT        = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=8.4080.ckpt-47"#"/content/tensorflow-yolov3/checkpoint/yolov3_coco.ckpt"
+#__C.YOLO.ORIGINAL_WEIGHT        = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=8.4080.ckpt-47"
+__C.YOLO.ORIGINAL_WEIGHT        = "/content/tensorflow-yolov3/checkpoint/yolov3_coco.ckpt"
 __C.YOLO.DEMO_WEIGHT            = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_coco_demo.ckpt"#"/content/tensorflow-yolov3/checkpoint/yolov3_coco_demo.ckpt"
 
 # Train options
