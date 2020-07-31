@@ -20,7 +20,8 @@ ROOT_DIR = "/content/tensorflow-yolov3"
 latest_checkpoint_path = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=8.4080.ckpt-47"
 
 pb_file = ROOT_DIR + "/yolov3_coco.pb"
-ckpt_file = latest_checkpoint_path#ROOT_DIR + "/checkpoint/yolov3_coco_demo.ckpt"
+#ckpt_file = latest_checkpoint_path
+ckpt_file = ROOT_DIR + "/checkpoint/yolov3_coco_demo.ckpt"
 output_node_names = ["input/input_data", "pred_sbbox/concat_2", "pred_mbbox/concat_2", "pred_lbbox/concat_2"]
 
 with tf.name_scope('input'):
