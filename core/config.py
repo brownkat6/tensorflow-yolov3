@@ -46,7 +46,8 @@ __C.TRAIN.LEARN_RATE_END        = 1e-6
 __C.TRAIN.WARMUP_EPOCHS         = 2
 __C.TRAIN.FISRT_STAGE_EPOCHS    = 20
 __C.TRAIN.SECOND_STAGE_EPOCHS   = 30
-__C.TRAIN.INITIAL_WEIGHT        = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_coco_demo.ckpt"#"/content/tensorflow-yolov3/checkpoint/yolov3_coco_demo.ckpt"
+#__C.TRAIN.INITIAL_WEIGHT        = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_coco_demo.ckpt"
+__C.TRAIN.INITIAL_WEIGHT        = "/content/tensorflow-yolov3/checkpoint/yolov3_coco_demo.ckpt"
 
 
 
