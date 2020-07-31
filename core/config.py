@@ -37,7 +37,7 @@ __C.YOLO.DEMO_WEIGHT            = "/content/gdrive/My Drive/Robotics/yolov3/chec
 # Train options
 __C.TRAIN                       = edict()
 
-__C.TRAIN.ANNOT_PATH            = "/content/tensorflow-yolov3/data/dataset/train_power_cell.txt"
+__C.TRAIN.ANNOT_PATH            = "/content/tensorflow-yolov3/data/dataset/train_ball_goal.txt"
 __C.TRAIN.BATCH_SIZE            = 6
 __C.TRAIN.INPUT_SIZE            = [320, 352, 384, 416, 448, 480, 512, 544, 576, 608]
 __C.TRAIN.DATA_AUG              = True
@@ -53,7 +53,7 @@ __C.TRAIN.INITIAL_WEIGHT        = "/content/gdrive/My Drive/Robotics/yolov3/chec
 # TEST options
 __C.TEST                        = edict()
 
-__C.TEST.ANNOT_PATH             = "/content/tensorflow-yolov3/data/dataset/train_power_cell.txt"
+__C.TEST.ANNOT_PATH             = "/content/tensorflow-yolov3/data/dataset/train_ball_goal.txt"
 __C.TEST.BATCH_SIZE             = 2
 __C.TEST.INPUT_SIZE             = 544
 __C.TEST.DATA_AUG               = False
