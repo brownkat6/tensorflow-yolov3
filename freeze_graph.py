@@ -33,7 +33,7 @@ print(model.conv_sbbox, model.conv_mbbox, model.conv_lbbox)
 
 sess  = tf.Session(config=tf.ConfigProto(allow_soft_placement=True))
 saver = tf.train.Saver()
-print(str(len(list(os.listdir("/content/gdrive/My Drive/Robotics/yolov3/checkpoint/")))) + " files  in checkpoint directory)
+print(str(len(list(os.listdir("/content/gdrive/My Drive/Robotics/yolov3/checkpoint/")))) + " files  in checkpoint directory")
 saver.restore(sess, ckpt_file)
 
 converted_graph_def = tf.graph_util.convert_variables_to_constants(sess,
