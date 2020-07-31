@@ -17,7 +17,7 @@ from core.yolov3 import YOLOV3
 
 ROOT_DIR = "/content/tensorflow-yolov3"
 
-latest_checkpoint_path = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=8.5068.ckpt"
+latest_checkpoint_path = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=8.4080.ckpt-47"
 
 pb_file = ROOT_DIR + "/yolov3_coco.pb"
 ckpt_file = latest_checkpoint_path#ROOT_DIR + "/checkpoint/yolov3_coco_demo.ckpt"
