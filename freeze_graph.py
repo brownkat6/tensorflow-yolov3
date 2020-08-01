@@ -18,7 +18,7 @@ import os
 
 ROOT_DIR = "/content/tensorflow-yolov3"
 
-ckpt_model_name = "/yolov3_45_epochs.pb"#"/yolov3_coco.pb"
+ckpt_model_name = "yolov3_ball_goal.pb"#"/yolov3_45_epochs.pb"#"/yolov3_coco.pb"
 
 latest_checkpoint_path = "/content/gdrive/My Drive/Robotics/yolov3/checkpoint/yolov3_test_loss=nan.ckpt-30"#yolov3_test_loss=8.7657.ckpt-45"
 
